@@ -1,0 +1,156 @@
+main{
+  text-align:center;
+}
+
+.nav-wrapper{
+  padding:0 1.6rem;
+}
+
+.card .card-content{
+  padding:1rem .8rem; 
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.card .card-content .card-title{
+  line-height:1.4rem;
+}
+
+.card .card-title{
+  font-size:1.2rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.card .card-action{
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .price{
+  font-weight:600;
+  font-size:1.2rem;
+}
+
+.card .price::after{
+  content:'UAH';
+  margin-left:4px;
+  font-weight:400;
+  font-size:1rem;
+}
+
+.brand-logo img{
+  width:40px;
+  display:inline-block;
+  margin-top:.8rem;
+}
+
+.card .card-image img{
+  height:280px;
+  object-fit:fill;
+}
+
+/* Корзина */
+.cart, .order-head{
+  text-align:center;
+  border-bottom:1px solid #1b4b59;
+  padding-bottom:15px;
+}
+
+.card .card-action a{
+  display:block;
+  margin-right:0!important;
+  margin-bottom:8px;
+}
+
+.card .card-action a i{
+  font-style:normal;
+}
+
+.card .card-action a:hover i{
+  border-bottom:1px solid #ffab40;
+}
+
+.basket-act{
+  text-align:center;
+}
+
+.basket-price span{
+  font-weight:600;
+}
+
+.basket-empty, .page__404{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.basket-empty p{
+  font-size:1.5rem;
+}
+
+.basket-empty img{
+  width:100px;
+  margin:15px 0;
+}
+
+.basket-empty a{
+  font-weight:600;
+}
+
+.basket-empty a:hover, .basket-continue a:hover{
+  text-decoration:underline;
+}
+
+/* Orders */
+.bk-orders{
+  margin:.5rem 0;
+}
+
+/* Логин/регистрация */
+.auth{
+  padding-top:.2rem;
+}
+
+.reg-err{
+  display: table;
+  margin: 0 auto;
+}
+
+.reg-err p{
+  text-align: center;
+  background-color: tomato;
+  color: white; 
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* 404 */
+
+.page__404 p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page__404 span{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ПРОФИЛЬ */
+
+.head__profile{
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.avatar{
+  width: 350px;
+}
+

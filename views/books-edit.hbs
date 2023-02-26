@@ -1,0 +1,27 @@
+{{#if error}}
+  <div class="reg-err"><p>{{error}}</p></div>
+{{/if}}
+
+<h2>Редактировать <span>{{books.title}}</span></h2>
+<form action="/books/edit" method="post">
+  <div class="input-field col s12">
+    <input id="title" type="text" class="validate" name="title" value="{{books.title}}">
+    <label for="title">Название книги:</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="price" type="number" class="validate" name="price" value="{{books.price}}">
+    <label for="price">Цена книги (UAH):</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="image" type="text" class="validate" name="image" value="{{books.image}}">
+    <label for="image">Ссылка на фото обложки:</label>
+  </div>
+  <input type="hidden" name='_csrf' value='{{csrf}}'>
+  <input type="hidden" name="_id" value="{{books._id}}">
+  <button class="btn">Редактировать книгу</button>
+</form>
+<form action="/books/remove" method="post" class="rem">
+  <input type="hidden" name='_csrf' value='{{csrf}}'>
+  <input type="hidden" name="_id" value="{{books._id}}">
+  <button class="btn red">Удалить книгу</button> 
+</form>

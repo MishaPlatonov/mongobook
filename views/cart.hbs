@@ -1,0 +1,42 @@
+<h1 class="cart">Корзина</h1>
+<div id="cart">
+{{#if books.length}}
+<table>
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Количество</th>
+      <th>Цена (за шт.)</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each books}}
+    <tr>
+      <td>{{title}}</td>
+      <td>{{count}}</td>
+      <td>{{price}}</td>
+      <td>
+
+        <button class="btn btn-small bk-remove" data-csrf="{{@root.csrf}}" data-id="{{_id}}">Удалить</button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+<div class="basket-act">
+  <p class="basket-price">Цена: <span>{{price}}</span></p>
+  <form action="/orders" method="post" class="bk-orders">
+    <input type="hidden" name='_csrf' value='{{csrf}}'>
+    <button class="btn" type="submit">Оформить заказ</button>
+  </form>
+  <p class="basket-continue"><a href="/books">Продолжить покупки</a></p>
+</div>
+{{else}}
+<div class="basket-empty">
+  <p>Корзина пуста :(</p>
+  <img src="/img/empty-basket.png">
+  <a href="/">Вернуться на главную</a>
+</div>
+{{/if}}
+</div>

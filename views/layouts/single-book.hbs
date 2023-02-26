@@ -1,0 +1,14 @@
+{{> head }}
+<body>
+  {{> navbar }}
+<div class="single-book">
+  <div class="single-book__title">
+    <h1>{{book.title}}</h1>
+    <img src="{{book.image}}" alt="{{book.title}}"> 
+  </div>
+  <div class="price">{{book.price}}</div>
+  <a href="/books" class="back">Назад</a>
+</div>
+{{> footer }}
+</body>
+</html>
